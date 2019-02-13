@@ -1,10 +1,9 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
 
         String[] wordsE = new String[]{"want", "like", "need", "do", "live", "work", "know", "get", "see", "hear"};
         String[] wordsU = new String[]{"хотіти", "любити", "потребувати", "робити", "жити", "працювати", "знати", "ставати", "бачити", "чути"};
@@ -15,11 +14,15 @@ public class Main {
         }
 
         for (String key: map.keySet()) {
-
             System.out.print(key + " - ");
-            System.out.println(map.get(key));
+            String translite = scanner.next();
+            if (translite.equals(map.get(key))){
+                System.out.println("true");
+            }
+            else {
+                System.out.println("falce");
+            }
         }
-
 
     }
 }
